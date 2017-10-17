@@ -1,9 +1,9 @@
 (function() {
-    function RoomCtrl(Room) {
+    function chatRoomCtrl(Room) {
       this.rooms = Room.all;
     }
 
     angular
         .module('chat-app-6aa99')
-        .controller('RoomCtrl', ['Room', RoomCtrl]);
+        .controller('chatRoomCtrl', ['Room', chatRoomCtrl]);
 })();
