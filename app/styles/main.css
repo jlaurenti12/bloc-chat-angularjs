@@ -1,0 +1,26 @@
+.sidebar {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: lightgray;
+  width: 20%;
+  height: 100%;
+  box-sizing: content-box;
+  min-width: 1px;
+  max-width: 260px;
+  font-family: Helvetica;
+
+}
+
+.sidebar h1 {
+  padding-left: 15px;
+}
+
+.sidebar h2 {
+  padding-left: 15px;
+}
+
+.sidebar p {
+  padding-left: 15px;
+  color: gray;
+}
