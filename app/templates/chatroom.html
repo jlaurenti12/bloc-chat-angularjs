@@ -1,11 +1,13 @@
 <div class="sidebar">
 
-  <h1>Bloc Chat</h1>
-
-  <h2>Rooms</h2>
+<div>
+  <h1>Bloc Chat
+  <button class="btn btn-default btn-success" type="button" ng-click="chatroom.addRoom()">New Room</span>
+  </h1>
+</div>
 
   <div ng-repeat="room in chatroom.rooms">
-    <p>{{ room.$value }}<p>
+    <h4>{{ room.$value }}</h4>
   </div>
 
 </div>
