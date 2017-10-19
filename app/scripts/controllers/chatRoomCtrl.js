@@ -1,6 +1,10 @@
 (function() {
-    function chatRoomCtrl(Room, Message, $uibModal) {
+    function chatRoomCtrl(Room, Message, $uibModal, $cookies) {
       this.rooms = Room.all;
+      this.currentRoom = null;
+      this.currentUser = $cookies.get('blocChatCurrentUser');
+      console.log(this.currentUser);
+
       this.addRoom = function() {
           $uibModal.open({
               templateUrl: '/templates/modal.html',
@@ -11,11 +15,10 @@
       this.selectRoom = function(room) {
         this.currentRoom = room;
         this.messages = Message.getByRoomId(this.currentRoom.$id);
-        console.log(this.messages)
       }
   }
 
     angular
         .module('chat-app-6aa99')
-        .controller('chatRoomCtrl', ['Room', 'Message', '$uibModal', chatRoomCtrl]);
+        .controller('chatRoomCtrl', ['Room', 'Message', '$uibModal', '$cookies', chatRoomCtrl]);
 })();
