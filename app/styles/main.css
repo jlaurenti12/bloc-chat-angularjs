@@ -3,13 +3,12 @@
   left: 0px;
   top: 0px;
   background-color: lightgray;
-  width: 20%;
+  width: 330px;
   height: 100%;
-  box-sizing: content-box;
-  width: 25%;
-  font-family: Helvetica;
-  padding-right: 40px;
-  padding-top: 20px;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 15px;
+
 }
 
 .sidebar h1 {
@@ -18,8 +17,58 @@
 
 .sidebar h4 {
   padding-left: 15px;
+  cursor: pointer;
 }
 
 button {
+  float: right;
+  height: 40px;
+  border: 1px solid black;
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content-area {
+  font-family: Helvetica;
+  padding-top: 10px;
+  position: absolute;
+  display: inline-block;
+  background-color: white;
+  left: 330px;
+  height: 100%;
+  width: 950px;
+}
+
+.content-area h3 {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.messages {
+  background-color: white;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-right: 20px;
+  border-color: gray;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  vertical-align: middle;
+}
+
+.username {
+  text-align: left;
+  font-weight: bold;
+  padding-left: 25px;
+}
+
+.user-message {
+  text-align: left;
+  padding-left: 25px;
+}
+
+.timestamp {
+  font-style: italic;
+  color: gray;
   float: right;
 }
