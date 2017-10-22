@@ -91,3 +91,20 @@
   color: gray;
   float: right;
 }
+
+.input-field input {
+  position: absolute;
+  width: 85%;
+  bottom: 0px;
+  height: 40px;
+  padding-left: 15px;
+}
+
+.input-field button {
+  position: absolute;
+  width: 15%;
+  bottom: 0px;
+  left: 85%;
+  border-radius: 0px;
+  height: 40px;
+}

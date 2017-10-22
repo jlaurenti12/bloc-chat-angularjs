@@ -1,7 +1,7 @@
 (function() {
     function chatRoomCtrl(Room, Message, $uibModal, $cookies) {
       this.rooms = Room.all;
-      this.currentRoom = null;
+      console.log(this.rooms);
       this.currentUser = $cookies.get('blocChatCurrentUser');
       console.log(this.currentUser);
 
@@ -14,7 +14,14 @@
       }
       this.selectRoom = function(room) {
         this.currentRoom = room;
+        this.username = this.currentUser;
         this.messages = Message.getByRoomId(this.currentRoom.$id);
+      }
+
+      this.sendMessage = function() {
+        this.newMessage.roomId = this.currentRoom.$id;
+        this.newMessage.username = this.currentUser;
+        Message.send(this.newMessage);
       }
   }
 
