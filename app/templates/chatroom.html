@@ -16,15 +16,15 @@
     <h3>{{ chatroom.currentRoom.$value }}</h3>
   </div>
   <div class="chat-section">
-  <div>
-    <div class="messages" ng-repeat="message in chatroom.messages">
-        <span class="username">{{ message.username }}</span>
-        <span class="timestamp">{{ message.sentAt | date : "shortTime" }}</span>
-        <div class="user-message">{{ message.content }}</div>
+    <div scroll-glue class="message-group">
+        <div class="messages" ng-repeat="message in chatroom.messages">
+          <span class="username">{{ message.username }}</span>
+          <span class="timestamp">{{ message.sentAt | date : "shortTime" }}</span>
+          <div class="user-message">{{ message.content }}</div>
     </div>
   </div>
     <div class="input-field">
-        <input type="text" name="input" placeholder="Write your message here" ng-model="chatroom.newMessage.content">
+        <input type="text" name="input" placeholder="Write your message here" ng-model="chatroom.newMessage.content" ng-keyup="$event.keyCode == 13 ? chatroom.sendMessage() : null">
         <button class="btn btn-default btn-success" ng-click="chatroom.sendMessage()">Send Message</button>
     </div>
   </div>

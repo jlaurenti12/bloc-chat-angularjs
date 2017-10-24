@@ -108,3 +108,8 @@
   border-radius: 0px;
   height: 40px;
 }
+
+.message-group {
+  height: 85vh;
+  overflow: scroll;
+}

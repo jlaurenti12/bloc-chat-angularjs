@@ -2,8 +2,7 @@
     function chatRoomCtrl(Room, Message, $uibModal, $cookies) {
       var promise = Room.all;
       this.currentRoom = null;
-      this.currentUser = $cookies.get('blocChatCurrentUser');
-      console.log(this.currentUser);
+      this.newMessage = {};
 
 
       promise.$loaded(rooms => {
@@ -33,7 +32,7 @@
       }
 
       this.sendMessage = function() {
-        this.currentUser =$cookies.get('blocChatCurrentUser');
+        this.currentUser = $cookies.get('blocChatCurrentUser');
         this.newMessage.roomId = this.currentRoom.$id;
         this.newMessage.username = this.currentUser;
         this.newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
