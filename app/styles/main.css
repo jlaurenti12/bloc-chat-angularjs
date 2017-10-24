@@ -1,5 +1,5 @@
 .sidebar {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   background-color: lightgray;
@@ -59,7 +59,7 @@
   width: 950px;
 }
 
-.content-area h3 {
+.header {
   text-align: left;
   padding-left: 20px;
 }
@@ -93,7 +93,7 @@
 }
 
 .input-field input {
-  position: absolute;
+  position: fixed;
   width: 85%;
   bottom: 0px;
   height: 40px;
@@ -101,7 +101,7 @@
 }
 
 .input-field button {
-  position: absolute;
+  position: fixed;
   width: 15%;
   bottom: 0px;
   left: 85%;

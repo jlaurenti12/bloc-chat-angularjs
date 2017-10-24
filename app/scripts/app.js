@@ -15,6 +15,6 @@
 }
 
     angular
-        .module('chat-app-6aa99', ['ui.router', 'ui.bootstrap', 'firebase', 'ngCookies'])
+        .module('chat-app-6aa99', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
         .config(config);
 })();

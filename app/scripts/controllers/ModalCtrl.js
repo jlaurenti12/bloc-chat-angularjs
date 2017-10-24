@@ -12,7 +12,7 @@
         this.createUsername = function () {
             $cookies.put('blocChatCurrentUser', this.username);
             $uibModalInstance.close();
-        };
+        }
     }
 
     angular
